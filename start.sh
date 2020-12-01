@@ -6,7 +6,7 @@ appname=${name}                   #容器名称
 port=80                         #docker暴露端口
 
 #  mvn打包镜像
-docker run  --rm doc--name my-maven-project -v /root/.m2:/root/.m2 -v "$PWD":/usr/src/mymaven -w /usr/src/mymaven maven:3.5.0-jdk-8-alpine mvn clean install
+docker run  --rm --name my-maven-project -v /root/.m2:/root/.m2 -v "$PWD":/usr/src/mymaven -w /usr/src/mymaven maven:3.5.0-jdk-8-alpine mvn clean install
 # 获得docker容器 id和镜像 id
 r_c=`docker ps -a | grep "$appname" | awk '{print $1 }'`
 c=`docker ps -a | grep "$appname" | awk '{print $1 }'`
