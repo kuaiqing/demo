@@ -34,4 +34,4 @@ mkdir -p $PWD/logs
 chmod 777 $PWD/logs
 
 # 启动镜像  8086为工程的端口
-docker run -d --name   aaa1  -p 8888:9999  "$appname"
+docker run -d --name   aaa1  -p 8888:9999  $appname
