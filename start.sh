@@ -28,10 +28,10 @@ if [ "$r_img"x != ""x ]; then
 fi
 
 # 生成镜像
-docker build -t $img_output .
+#docker build -t $img_output .
 # 日志目录
 mkdir -p $PWD/logs
 chmod 777 $PWD/logs
 
 # 启动镜像  8086为工程的端口
-docker run -d --name app:v1.8.0_221 -p $port:9999 $img_output
+docker run -d --name app:v1.8.0_221 -p 80:9999
